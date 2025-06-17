@@ -46,21 +46,13 @@ class Generator {
 		// sort categories on name for display
 		sitemap.sort(function(a, b) return a.title > b.title ? 1 : -1);
 		
-		// put category "other" as last item
-		var beginnerCategory = sitemap.filter(function(c) return c.title.toLowerCase() == "beginner")[0];
-		sitemap.remove(beginnerCategory);
-		sitemap.unshift(beginnerCategory);
-		
-		// put category "other" as last item
-		var otherCategory = sitemap.filter(function(c) return c.title.toLowerCase() == "other")[0];
-		sitemap.remove(otherCategory);
-		sitemap.push(otherCategory);
-		
 		// add overview page for each category
 		addCategoryPages(sitemap);
 		
 		// assign page.category
-		for (page in _pages) page.category = getCategory(sitemap, page);
+		for (page in _pages) {
+			page.category = getCategory(sitemap, page);
+		}
 		
 		// sort category pages by filename
 		for (category in sitemap) category.pages.sort(function(a, b) {
@@ -224,8 +216,8 @@ class Generator {
 									new Page("layout-page-toc.mtt",	"table-of-content-serie.mtt", 'category/${category.id}/index.html')
 								 else 
 									new Page("layout-page-toc.mtt",	"table-of-content-category.mtt", 'category/${category.id}/index.html')
-										.setTitle('Haxe ${category.title} articles overview')
-										.setDescription('Overview of Haxe ${category.title.toLowerCase()} snippets and tutorials.')
+										.setTitle('${category.title} articles overview')
+										.setDescription('Overview of Friday Night Funkin\' ${category.title.toLowerCase()} snippets and tutorials.')
 										.hidden();
 		 
 			if (category.isSerie) {
@@ -243,9 +235,9 @@ class Generator {
 		for (tag in tags.keys()) {
 			var tagTitle = getTagTitle(tag);
 			addPage(new Page("layout-page-toc.mtt",	"tags.mtt", 'tag/$tag.html')
-												.setTitle('Haxe $tagTitle articles overview')
+												.setTitle('$tagTitle articles overview')
 												.setCustomData({tag:tag, pages: tags.get(tag)})
-												.setDescription('Overview of Haxe code snippets, examples and tutorials tagged with $tagTitle.')
+												.setDescription('Overview of Friday Night Funkin\' $tagTitle articles.')
 												.hidden(), "tags");
 		}
 	}
@@ -253,9 +245,9 @@ class Generator {
 	private function addGeneralPages():Page {
 		var homePage = new Page("layout-page-main.mtt", "index.mtt", "index.html")
 													.hidden()
-													.setTitle("Learn with Haxe - Community driven Haxe code snippets, examples and tutorials.")
-													.setDescription('The Haxe Code Cookbook is a central learning resource with Haxe code snippets, examples and tutorials.');
-		
+													.setTitle("Friday Night Funkin' Cookbook")
+													.setDescription('The Friday Night Funkin\' Cookbook is a central learning resource with Friday Night Funkin\' example mods.');
+
 		var errorPage = new Page("layout-page-main.mtt", "404.mtt", "404.html")
 													.hidden()
 													.setTitle("Page not found");

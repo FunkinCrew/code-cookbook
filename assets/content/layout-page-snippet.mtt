@@ -2,7 +2,7 @@
 <header class="hero-unit-small">
 	<div class="container">
 		<div class="row">
-			<div id="title">Haxe Code Cookbook</div>
+			<div id="title">Friday Night Funkin' Cookbook</div>
 		</div>
 	</div>
 </header>
@@ -42,7 +42,7 @@
 			<big class="pull-right"><a href="::currentPage.editUrl::?message=Update:%20::currentPage.title::&description=%0A%0ASources:%0A*%20::currentPage.absoluteUrl::%0A%0A::foreach author currentPage.authors::%40::author.username:: ::end::" title="Edit '::currentPage.title::' on GitHub" rel="external"><i class="fa fa fa-edit"></i></a></big> 
 			<small class="crumb" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
 				::set isSeriePage = (currentPage.category.isSerie && !currentPage.isSerieHome() && currentPage.category.parent!=null)::
-				<span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a itemprop="name" href="/">Haxe programming cookbook</a><meta itemprop="position" content="1" /></span>
+				<span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a itemprop="name" href="/">Friday Night Funkin' Cookbook</a><meta itemprop="position" content="1" /></span>
 				<span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem" ::cond isSeriePage ::><a itemprop="name" href="::currentPage.category.parent.outputPath::">::currentPage.category.parent.title::</a><meta itemprop="position" content="1" /></span>
 				<span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a itemprop="name" href="::currentPage.category.outputPath::">::currentPage.category.title::</a><meta itemprop="position" content="::if isSeriePage::3::else::2::end::" /></span>
 				<span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a itemprop="name" href="::currentPage.outputPath::">::currentPage.title::</a><meta itemprop="position" content="::if isSeriePage::4::else::3::end::" /></span>
@@ -116,30 +116,11 @@
 			<hr/>
 			<div class="contribution">
 				<span><i class="fa fa fa-edit"></i> <a href="::currentPage.editUrl::?message=Update:%20::currentPage.title::&description=%0A%0ASources:%0A*%20::currentPage.absoluteUrl::%0A%0A::foreach author currentPage.authors::%40::author.username:: ::end::" title="Edit '::currentPage.title::' on GitHub" rel="external nofollow noopener">Edit page</a></span> 
-				 ::if false::<span>| <i class="fa fa-lightbulb-o"></i> <a href="https://github.com/HaxeFoundation/code-cookbook/issues/new?title=Suggestion:%20::currentPage.title::&body=%0A%0ASources:%0A*%20::currentPage.absoluteUrl::%0A*%20::currentPage.contributionUrl::%0A%0A::foreach author currentPage.authors::%40::author.username:: ::end::" title="Create issue about '::currentPage.title::' on GitHub" rel="external nofollow noopener">Suggest improvement / Report issue</a></span> ::end::
+				 ::if false::<span>| <i class="fa fa-lightbulb-o"></i> <a href="https://github.com/FunkinCrew/code-cookbook/issues/new?title=Suggestion:%20::currentPage.title::&body=%0A%0ASources:%0A*%20::currentPage.absoluteUrl::%0A*%20::currentPage.contributionUrl::%0A%0A::foreach author currentPage.authors::%40::author.username:: ::end::" title="Create issue about '::currentPage.title::' on GitHub" rel="external nofollow noopener">Suggest improvement / Report issue</a></span> ::end::
 				<span ::cond !currentPage.category.isSerie::>| <i class="fa fa-plus-circle"></i> <a href="::currentPage.addLinkUrl::" rel="external" title="Add new page in '::currentPage.category.title::' on Github">Add new page</a></span> 
 			</div>
 			<hr/>
-			<script src="https://utteranc.es/client.js" repo="HaxeFoundation/haxe.org-comments" branch="master" issue-term="[code.haxe.org] ::currentPage.category.title:: - ::currentPage.title::" async="async"></script>
-			
-			<center class="share-buttons">
-				<a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="haxe" data-size="large" rel="external nofollow noopener">Tweet</a> 
-				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-				
-				&nbsp; 
-				<!-- Load Facebook SDK for JavaScript -->
-				<div id="fb-root" style="display:inline-block"></div>
-				<script>(function(d, s, id) {
-					var js, fjs = d.getElementsByTagName(s)[0];
-					if (d.getElementById(id)) return;
-					js = d.createElement(s); js.id = id;
-					js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-					fjs.parentNode.insertBefore(js, fjs);
-				}(document, 'script', 'facebook-jssdk'));</script>
-
-				<!-- FB like button code -->
-				<div class="fb-like" data-href="::currentPage.absoluteUrl::" style="display:inline-block" data-layout="button_count" data-action="like" data-show-faces="true" data-size="large"></div>
-			</center>
+			<script src="https://utteranc.es/client.js" repo="FunkinCrew/code-cookbook" branch="master" label="comment" issue-term="[Comment] ::currentPage.category.title:: - ::currentPage.title::" async="async"></script>
 		</article>
 	</section>
 </main>

@@ -1,9 +1,6 @@
 <header class="hero-unit">
 	<div class="container">
-		<h1>Haxe Code Cookbook</h1>
-		<h3 class="lead">
-			Community driven <a href="https://haxe.org/">Haxe</a> code snippets, examples and tutorials.
-		</h3>
+		<h1>Friday Night Funkin' Cookbook</h1>
 	</div>
 </header>
 
@@ -26,11 +23,9 @@
 <section class="container">
 	<div class="row">
 		<div class="span4">
-			<h1>Learn with Haxe</h1>
+			<h1>Modding Tutorials</h1>
 			<p class="lead">
-				There are many ways to learn Haxe. On this website you'll find a lot of resources you need to become a Haxe developer. 
-				<br/><br/>
-				So why not start learning and join the community today? If you haven’t learned Haxe yet, the time is now.
+				Many tutorials, many mods. So many options to choose from....
 			</p>
 			<hr/>
 		</div>
@@ -57,32 +52,14 @@
 	
 	<div class="row">
 		<div class="span4">
-			<h3><i class="fa fa-big fa-rocket"></i> The cross-platform development toolkit</h3>
-			<p>Haxe is a modern high-level strictly-typed programming language with a fast optimizing cross-compiler.</p>
-			<a href="https://haxe.org/download" class="btn btn-large"><i class="fa fa-download"></i> Download Haxe 4.3.7</a><br/>
-			<small><em>Released: 2025-05-09</em></small>
+			<h3><i class="fa fa-big fa-rocket"></i> The open-source cross-platform game</h3>
+			<p>Friday Night Funkin' is a rhythm game that is open-source and what not</p>
 		</div>
 		<div class="span4">
-			<h3><i class="fa fa-big fa-gears"></i> Learning by example</h3>
-			<p>The Haxe Foundation facilitates the following code cookbook for the Haxe commmunity. 
-			Enjoy learning Haxe; It is great!</p>
-			<strong>More documentation:</strong>
-			<p>
-				<p><i class="fa fa-external-link"></i> <a href="https://haxe.org/documentation" rel="external">Haxe Documentation</a></p>
-				<p><i class="fa fa-external-link"></i> <a href="https://haxe.org/manual" rel="external">Haxe Manual</a></p>
-				<p><i class="fa fa-external-link"></i> <a href="https://api.haxe.org" rel="external">Haxe API documentation</a></p>
-				<p>You can try Haxe in the browser! <a href="https://try.haxe.org" rel="external">try.haxe.org</a></p>
-			</p>
+			<h3><i class="fa fa-big fa-gears"></i> TBD</h3>
 		</div>
 		<div class="span4">
-			<h3><i class="fa fa-big fa-globe"></i> Contribution is easy</h3>
-			<p>The project is being developed on GitHub. Feel free to contribute code snippets, tutorials and how-to guides. </p>
-			<p><i class="fa fa-github"></i> <a href="https://github.com/HaxeFoundation/code-cookbook" rel="external noopener">Haxe Code Cookbook on Github</a></p>
-			<p>
-			<a class="github-button" href="https://github.com/HaxeFoundation/code-cookbook" data-icon="octicon-star" data-style="mega" data-count-href="/HaxeFoundation/code-cookbook/stargazers" data-count-api="/repos/HaxeFoundation/code-cookbook#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star HaxeFoundation/code-cookbook on GitHub">Star</a>
-			 &nbsp; <a class="github-button" href="https://github.com/HaxeFoundation/code-cookbook/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/HaxeFoundation/code-cookbook/network" data-count-api="/repos/HaxeFoundation/code-cookbook#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork HaxeFoundation/code-cookbook on GitHub">Fork</a>
-			<script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
-			</p>
+			<h3><i class="fa fa-big fa-globe"></i> TBD</h3>
 		</div>
 	</div>
 	

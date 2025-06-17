@@ -1,10 +1,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 
 <channel>
-	<title>Haxe programming language - Code Cookbook</title>
+	<title>Friday Night Funkin' Cookbook</title>
 	<link>::basePath::</link>
-	<description>Easy to read Haxe programming language examples.</description>
-	<managingEditor>contact@haxe.org (Haxe Foundation)</managingEditor>
+	<description>Easy to read Friday Night Funkin' Mod Examples</description>
+	<managingEditor>tbd@email.com</managingEditor>
 	<docs>http://blogs.law.harvard.edu/tech/rss</docs>
 	<language>en</language>
 	<lastBuildDate>::convertDate(now)::</lastBuildDate>

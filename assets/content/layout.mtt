@@ -15,7 +15,7 @@
 	
 	<link rel="icon" href="https://haxe.org/favicon.ico" />
 	<link rel="canonical" href="::currentPage.absoluteUrl::" ::cond currentPage.absoluteUrl != null:: />
-	<link href="::basePath::rss.xml" rel="alternate" type="application/atom+xml" title="RSS Feed Haxe Code Cookbook" />
+	<link href="::basePath::rss.xml" rel="alternate" type="application/atom+xml" title="RSS Feed Friday Night Funkin' Cookbook" />
 
 	<meta name="description" content="::currentPage.description::" ::cond currentPage.description != null:: />
 
@@ -57,7 +57,7 @@
 		<div class="navbar navbar-fixed-top navbar-inverse">
 			<div class="navbar-inner">
 				<button class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse" type="button"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="brand haxe-logo" href="https://haxe.org/"><img alt="Haxe" height="21" onerror="this.src='https://haxe.org/img/haxe-logo-horizontal-on-dark.png'" src="https://haxe.org/img/haxe-logo-horizontal-on-dark.svg" width="107" /></a>
-				<a class="brand sub ide" href="./">CODE</a>
+				<a class="brand sub ide" href="./">Friday Night Funkin'</a>
 
 				<div class="nav-collapse collapse">
 				<ul class="nav">
@@ -75,55 +75,7 @@
 						</ul>
 					</li>
 					<li class="divider"></li>
-					<!-- required submenu  on every subsite, put class="active" on   -->
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="https://haxe.org/documentation/">Learn Haxe <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li>
-								<a href="https://haxe.org/documentation/introduction/" rel="external nofollow noopener">Introduction</a>
-							</li>
-							<li>
-								<a href="https://haxe.org/manual/" rel="external nofollow noopener">Manual</a>
-							</li>
-							<li class="active">
-								<a href="https://code.haxe.org" rel="external nofollow noopener">Code Cookbook</a>
-							</li>
-							<li>
-								<a href="https://api.haxe.org" rel="external nofollow noopener">API Documentation</a>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<a href="https://haxe.org/videos/" rel="external nofollow noopener">Videos</a>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<a href="https://try.haxe.org" rel="external nofollow noopener">Try Haxe online</a>
-							</li>
-							<li>
-								<a href="https://lib.haxe.org" rel="external nofollow noopener">Haxelib</a>
-							</li>
-						</ul>
-				</li>
-				<li class=" dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Connect <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="https://github.com/HaxeFoundation" rel="external nofollow noopener"><i class="fa fa-github"></i> GitHub</a></li>
-						<li><a href="https://github.com/HaxeFoundation/haxe/issues" rel="external nofollow noopener"><i class="fa fa-github"></i> Bug reports</a></li>
-						<li><a href="https://stackoverflow.com/questions/tagged/haxe" rel="external nofollow noopener"><i class="fa fa-stack-overflow"></i> Stack Overflow</a></li>
-						<li><a href="https://community.haxe.org/" rel="external nofollow noopener"><i class="fa fa-envelope-o"></i> Forums</a></li>
-						<li><a href="https://discordapp.com/invite/0uEuWH3spjck73Lo" rel="external nofollow"><i class="fa fa-comments-o"></i> Discord</a></li>
-						<li><a href="https://gitter.im/HaxeFoundation/haxe" rel="external nofollow"><i class="fa fa-comments-o"></i> Gitter</a></li>
-						<li><a href="https://haxe.org/blog"><i class="fa fa-rss"></i> Blog</a></li>
-						<li class="divider"></li>
-						<li><a href="https://www.facebook.com/haxe.org/" rel="external nofollow noopener"><i class="fa fa-facebook"></i> Facebook</a></li>
-						<li><a href="https://twitter.com/search?q=%23haxe" rel="external nofollow noopener"><i class="fa fa-twitter"></i> #haxe</a></li>
-						<li><a href="https://twitter.com/haxelang" rel="external nofollow noopener"><i class="fa fa-twitter"></i> @haxelang</a></li>
-						<li><a href="https://twitter.com/haxe_org" rel="external nofollow noopener"><i class="fa fa-twitter"></i> @haxe_org</a></li>
-						<li class="divider"></li>
-						<li><a href="https://haxe.org/foundation/contact.html" rel="external nofollow noopener">Contact</a></li>
-					</ul>
-				</li>
-			</ul>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -135,8 +87,8 @@
 	<div class="container">
 		<div class="copyright">
 			<p>
-			&copy;::DateTools.format(now, "%Y")::&nbsp;<a class="hf-link" href="https://haxe.org/foundation/" rel="external nofollow noopener" title="Haxe Foundation Website">Haxe Foundation</a> |
-			&nbsp;<a href="https://github.com/HaxeFoundation/code-cookbook" title="Haxe Code Cookbook on GitHub" rel="external nofollow noopener">Code Cookbook on GitHub</a> 
+			&copy;::DateTools.format(now, "%Y")::&nbsp;<a class="hf-link" href="https://funkin.me/" rel="external nofollow noopener" title="Funkin' Crew Website">The Funkin' Crew</a> |
+			&nbsp;Created with <a href="https://github.com/HaxeFoundation/code-cookbook" title="Haxe Code Cookbook on GitHub" rel="external nofollow noopener">Code Cookbook on GitHub</a> 
 			</p>
 			<p class="last-modified">Last deploy: ::DateTools.format(now, "%b %d, %Y")::</p>
 		</div>
@@ -148,16 +100,6 @@
 
 <script defer="defer" src="https://haxe.org/js/jquery.min.js"></script>
 <script defer="defer" src="https://haxe.org/js/bootstrap.min.js"></script>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-74262827-2', 'auto');
-  ga('send', 'pageview');
-</script>
 
 </body>
 </html>
