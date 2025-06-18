@@ -45,6 +45,10 @@ class Generator {
 		
 		// sort categories on name for display
 		sitemap.sort(function(a, b) return a.title > b.title ? 1 : -1);
+
+		var introductionCategory = sitemap.filter(function(c) return c.title.toLowerCase() == "introduction")[0];
+		sitemap.remove(introductionCategory);
+		sitemap.unshift(introductionCategory);
 		
 		// add overview page for each category
 		addCategoryPages(sitemap);
