@@ -8,6 +8,10 @@ body {
   height: 100vh;
 }
 
+html {
+  scroll-padding-top:50px;
+}
+
 body, body p, body td, body li {
   line-height: 1.5;
 }

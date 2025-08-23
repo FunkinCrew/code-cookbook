@@ -12,6 +12,7 @@ import sys.io.File;
 import templo.Template;
 import util.GitUtil.GitAuthorInfo;
 import Config.*;
+using Lambda;
 
 using StringTools;
 
@@ -402,7 +403,54 @@ class Generator {
 			return content;
 		}
 	}
-	
+
+	private function replaceMarkdownLinks(page:Page, content:String) {
+		var linkRegex:EReg = ~/\[([^\]]+)\]\(([^)]+)\)/g;
+
+		var result:String = "";
+		var rest:String = content;
+
+		// this code is definitely something... but hey, at least it works
+		while (linkRegex.match(rest)) {
+			var start = linkRegex.matchedPos().pos;
+			var end = linkRegex.matchedPos().pos + linkRegex.matchedPos().len;
+
+			result += rest.substring(0, start);
+
+			var text = linkRegex.matched(1);
+			var url = linkRegex.matched(2);
+
+			if (url.startsWith("#")) {
+				url = page.absoluteUrl + url;
+				result += '[$text]($url)';
+				rest = rest.substr(end);
+				continue;
+			}
+
+			var anchorIndex = url.indexOf("#");
+			var anchor = "";
+			if (anchorIndex != -1) {
+				anchor = url.substr(anchorIndex);
+				url = url.substr(0, anchorIndex);
+			}
+
+			if (url != "" && !url.startsWith("http")) {
+				url = url.replace("../", "").replace("./", "").toLowerCase();
+				var contains = ["introduction", "intermediate", "advanced"].exists(function(item) return url.indexOf(item) != -1);
+				if (!url.startsWith("category/") && !contains) url = Path.directory(page.absoluteUrl) + "/" + url;
+				else url = "category/" + url;
+			}
+
+			if (url.endsWith(".md")) url = url.replace(".md", ".html");
+
+			result += '[$text]($url$anchor)';
+			rest = rest.substr(end);
+		}
+
+		result += rest;
+		return result;
+	}
+
 	private function getCategory(sitemap:Array<Category>, page:Page):Category {
 		for (category in sitemap) {
 			if (category.pages.indexOf(page) != -1 ) {
@@ -478,6 +526,7 @@ class Generator {
 		markdown = replaceYoutubeTags(markdown);
 		markdown = replaceTryHaxeTags(markdown);
 		markdown = replaceAuthor(page, markdown);
+		markdown = replaceMarkdownLinks(page, markdown);
 		try {
 			// replace windows line endings with unix, and split
 			var lines = ~/(\r\n|\r)/g.replace(markdown, '\n').split("\n");
@@ -512,6 +561,14 @@ class Generator {
 							var description = new markdown.HtmlRenderer().render(el.children);
 							page.description = new EReg("<(.*?)>", "g").replace(description, "").replace('"', "").replace('\n', " ");
 							// break;
+						}
+						if ((el.tag == "h1" || el.tag == "h2" || el.tag == "h3") && !el.isEmpty())
+						{
+							var heading = new markdown.HtmlRenderer().render(el.children);
+							var id = heading.toLowerCase().replace(" ", "-");
+							var regex = new EReg("[^a-z0-9\\-]", "g");
+							id = regex.replace(id, "");
+							el.attributes.set("id", id);
 						}
 			
 						#if test_snippets
