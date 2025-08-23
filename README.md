@@ -1,4 +1,5 @@
 # Funkin' Code CookBook
+## [**READ THE DOCUMENTATION HERE**](https://thekade.net/funkin-cookbook/)
 
 Forked from [Haxe Code CookBook](https://github.com/HaxeFoundation/code-cookbook), this is a one stop shop for all Funkin' Modding Tutorials!
 
