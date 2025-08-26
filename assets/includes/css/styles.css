@@ -257,6 +257,10 @@ footer {
   font-size: 0.85em;
 }
 
+.footnote-ref a:target {
+  scroll-margin-top: 40vh;
+}
+
 blockquote {
   margin-left: 30px;
   border-left: 4px solid #eee;
