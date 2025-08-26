@@ -253,6 +253,10 @@ footer {
   font-size: 90%;
 }
 
+.footnotes {
+  font-size: 0.85em;
+}
+
 blockquote {
   margin-left: 30px;
   border-left: 4px solid #eee;

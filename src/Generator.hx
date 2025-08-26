@@ -532,6 +532,7 @@ class Generator {
 			var lines = ~/(\r\n|\r)/g.replace(markdown, '\n').split("\n");
 			
 			// parse ref links
+			document.parseFootnotes(lines);
 			document.parseRefLinks(lines);
 			
 			// parse tags
@@ -541,7 +542,8 @@ class Generator {
 			}
 			
 			// parse ast
-			var blocks = document.parseLines(lines);
+			var parsedInline = document.parseLines(lines);
+			var blocks = document.filterFootnotes(parsedInline);
 			// pick first header, use it as title for the page
 			var titleBlock = null;
 			if (page != null) {
@@ -569,6 +571,28 @@ class Generator {
 							var regex = new EReg("[^a-z0-9\\-]", "g");
 							id = regex.replace(id, "");
 							el.attributes.set("id", id);
+						}
+						if ((el.tag == "p") && !el.isEmpty())
+						{
+							var paragraph = new markdown.HtmlRenderer().render(el.children);
+							var regex = ~/#[fF]n-[a-zA-Z0-9\-]+/g;
+							paragraph = regex.map(paragraph, function(r) {
+								var original = r.matched(0);
+								return page.absoluteUrl + original;
+							});
+							el.children.resize(0);
+							el.children.push(new TextNode(paragraph));
+						}
+						if ((el.tag == "section") && !el.isEmpty())
+						{
+							var section = new markdown.HtmlRenderer().render(el.children);
+							var regex = ~/#[fF]nref-[a-zA-Z0-9\-]+/g;
+							section = regex.map(section, function(r) {
+								var original = r.matched(0);
+								return page.absoluteUrl + original;
+							});
+							el.children.resize(0);
+							el.children.push(new TextNode(section));
 						}
 			
 						#if test_snippets
