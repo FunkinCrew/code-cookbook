@@ -594,6 +594,22 @@ class Generator {
 							el.children.resize(0);
 							el.children.push(new TextNode(section));
 						}
+						if ((el.tag == "div" && !el.isEmpty()))
+						{
+							for (child in el.children)
+							{
+								var childEl:ElementNode = cast child;
+								if (childEl.attributes.get('class') != null && childEl.attributes.get('class') == "markdown-alert-title") {
+									var textNode:TextNode = cast childEl.children[0];
+									var type = textNode.text.toLowerCase();
+									var img = new ElementNode('img', null);
+									img.attributes.set('src', 'svg/$type.svg');
+									img.attributes.set('alt', type);
+									img.attributes.set('class', 'markdown-alert-image');
+									childEl.children.insert(0, cast img);
+								}
+							}
+						}
 			
 						#if test_snippets
 						// TODO: Move to its own class?

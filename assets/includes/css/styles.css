@@ -272,6 +272,71 @@ blockquote.author-info {
   border-left: 4px solid #EA8220;
 }
 
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  color: inherit;
+  border-left: .25em solid #d1d9e0;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0;
+}
+
+.markdown-alert>:last-child {
+  margin-top: 0;
+}
+
+.markdown-alert-image {
+  margin-right: 8px;
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  line-height: 1;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: #0969da;
+}
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: #0969da;
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: #8250df;
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: #8250df;
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: #9a6700;
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: #9a6700;
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: #1a7f37;
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: #1a7f37;
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: #cf222e;
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: #d1242f;
+}
+
 .dark a, .dark a:hover, .dark a:active {
   color: rgb(234,130,32);
 }
