@@ -47,14 +47,19 @@ class Generator {
 		// sort categories on name for display
 		sitemap.sort(function(a, b) return a.title > b.title ? 1 : -1);
 
-		// sort categories by introduction, intermediate, and advanced
+		// sort categories by introduction, intermediate, advanced, and then expert
 
 		var introductionCategory = sitemap.filter(function(c) return c.title.toLowerCase() == "introduction")[0];
 		sitemap.remove(introductionCategory);
 		sitemap.unshift(introductionCategory);
+		
 		var advancedCategory = sitemap.filter(function(c) return c.title.toLowerCase() == "advanced")[0];
 		sitemap.remove(advancedCategory);
 		sitemap.push(advancedCategory);
+
+		var expertCategory = sitemap.filter(function(c) return c.title.toLowerCase() == "expert")[0];
+		sitemap.remove(expertCategory);
+		sitemap.push(expertCategory);
 
 		// add overview page for each category
 		addCategoryPages(sitemap);

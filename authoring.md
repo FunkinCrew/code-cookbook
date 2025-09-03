@@ -4,6 +4,10 @@ So you think you're cool enough to write some tutorials?
 
 Well, that's great! Here is all you need to know about how to write and maintain articles on this CookBook!
 
+## Standards
+
+Basic quality standards are required for each article, and are the exact same as the [base game](https://github.com/FunkinCrew/Funkin/blob/main/docs/CONTRIBUTING.md).
+
 ## Naming/File Structure
 
 Files should be stored inside of `assets/content/cookbook/`, in *sub-directories* of the article's top-level difficulty. So something that would be for beginners would be in `assets/content/cookbook/Introduction`, as an example.
