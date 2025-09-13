@@ -255,6 +255,7 @@ footer {
 
 .footnotes {
   font-size: 0.85em;
+  overflow-wrap: anywhere;
 }
 
 .footnote-ref a:target {
