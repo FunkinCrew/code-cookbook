@@ -1,0 +1,19 @@
+name: Enhancement Pull Request
+description: Add improvements/new information to an existing article.
+title: "[ENHANCEMENT] "
+body:
+  - type: markdown
+    attributes:
+      value: "# PLEASE READ THE [ARTICLE STANDARTS](https://github.com/FunkinCrew/code-cookbook/blob/master/authoring.md) BEFORE OPENING PULL REQUESTS!"
+
+  - type: textarea
+    attributes:
+      label: What does this pull request enhance?
+      placeholder: Describe your enhancements here...
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Screenshots/Videos
+      placeholder: Demonstrate your enhancements here...
