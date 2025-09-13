@@ -1,0 +1,19 @@
+name: Fix Pull Request
+description: Correct typos/formatting issues/inaccurate information that may be present in the articles.
+title: "[FIX] "
+body:
+  - type: markdown
+    attributes:
+      value: "# PLEASE READ THE [ARTICLE STANDARTS](https://github.com/FunkinCrew/code-cookbook/blob/master/authoring.md) BEFORE OPENING PULL REQUESTS!"
+
+  - type: textarea
+    attributes:
+      label: What does this pull request fix?
+      placeholder: Describe your fixes here...
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Screenshots/Videos
+      placeholder: Demonstrate your fixes here...
