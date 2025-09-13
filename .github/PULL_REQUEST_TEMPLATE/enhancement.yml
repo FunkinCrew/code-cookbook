@@ -8,7 +8,7 @@ body:
 
   - type: textarea
     attributes:
-      label: What does this pull request enhance?
+      label: What does this pull request add?
       placeholder: Describe your enhancements here...
     validations:
       required: true
