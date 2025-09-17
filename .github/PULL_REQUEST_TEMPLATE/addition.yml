@@ -1,0 +1,19 @@
+name: Addition Pull Request
+description: Suggest a new article.
+title: "[ADDITION] "
+body:
+  - type: markdown
+    attributes:
+      value: "# PLEASE READ THE [ARTICLE STANDARTS](https://github.com/FunkinCrew/code-cookbook/blob/master/authoring.md) BEFORE OPENING PULL REQUESTS!"
+
+  - type: textarea
+    attributes:
+      label: What does this pull request add?
+      placeholder: Describe your additions here...
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Screenshots/Videos
+      placeholder: Demonstrate your additions here...
