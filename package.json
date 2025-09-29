@@ -5,7 +5,9 @@
     "build": "npm run css && npm run haxe",
     "css": "lessc assets/includes/css/styles.css assets/includes/css/styles.min.css --clean-css='--s1 --advanced --compatibility=ie8'",
     "haxe": "haxe build.hxml",
-    "dev": "http-server -c-1 --cors -s -o output"
+    "dev": "http-server -c-1 --cors -s -o output",
+    "prettier:check": "prettier . --check",
+    "prettier:write": "prettier . --write"
   },
   "devDependencies": {
     "cson-parser": "3.0.0",
@@ -13,6 +15,7 @@
     "less-plugin-clean-css": "^1.6.0",
     "vscode-oniguruma": "^2.0.1",
     "vscode-textmate": "^9.1.0",
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "prettier": "^3.6.2"
   }
 }
