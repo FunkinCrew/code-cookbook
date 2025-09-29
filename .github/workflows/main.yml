@@ -39,11 +39,8 @@ jobs:
         haxelib install highlighting.hxml --always --quiet
         haxelib list
 
-    - name: Make build.sh executable
-      run: chmod +x build.sh
-
     - name: Run build script
-      run: ./build.sh
+      run: haxe build.hxml
 
     - name: Upload build artifacts (optional)
       uses: actions/upload-artifact@v4
