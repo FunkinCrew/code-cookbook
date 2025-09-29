@@ -23,9 +23,9 @@
 <section class="container">
 	<div class="row">
 		<div class="span4">
-			<h1>Modding Tutorials</h1>
+			<h1>Friday Night Funkin' Cookbook</h1>
 			<p class="lead">
-				Many tutorials, many mods. So many options to choose from....
+				Tutorials, guides, and resources for modding Friday Night Funkin'
 			</p>
 			<hr/>
 		</div>
@@ -53,13 +53,15 @@
 	<div class="row">
 		<div class="span4">
 			<h3><i class="fa fa-big fa-rocket"></i> The open-source cross-platform game</h3>
-			<p>Friday Night Funkin' is a rhythm game that is open-source and what not</p>
+			<p>Friday Night Funkin' has an extensive modding community, so we've made a cookbook with numerous tutorials and resources available for aspiring creators and modders alike.</p>
 		</div>
 		<div class="span4">
-			<h3><i class="fa fa-big fa-gears"></i> TBD</h3>
+			<h3><i class="fa fa-big fa-gears"></i> Modding Resources</h3>
+			<p>Explore a variety of modding resources, including tutorials, examples, and documentation to help you get started with creating your own mods.</p>
 		</div>
 		<div class="span4">
-			<h3><i class="fa fa-big fa-globe"></i> TBD</h3>
+			<h3><i class="fa fa-big fa-globe"></i> Community Resources</h3>
+			<p>Connect with the Friday Night Funkin' modding community and help contribute articles on <a href="https://github.com/FunkinCrew/code-cookbook/blob/master/authoring.md">Github!</a></p>
 		</div>
 	</div>
 	
