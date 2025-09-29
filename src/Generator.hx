@@ -556,7 +556,7 @@ class Generator {
 				var hasTitle = false;
 				var count = 0;
 				for (block in blocks) {
-					var el = Std.instance(block, ElementNode);
+					var el = Std.downcast(block, ElementNode);
 					if (el != null) {
 						if (!hasTitle && el.tag == "h1" && !el.isEmpty()) {
 							page.title = new markdown.HtmlRenderer().render(el.children);
