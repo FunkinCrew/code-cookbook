@@ -24,9 +24,7 @@ Install from npm:
 npm install
 ```
 
-Either run `build.bat` or `build.sh` depending on your platform.
-
-(joke is, they're the same file)
+Run `haxe build.hxml`.
 
 The main repo tells users to run it through neko, so we do that as well. But we also run highlighting.hxml for the code highlighting.
 
