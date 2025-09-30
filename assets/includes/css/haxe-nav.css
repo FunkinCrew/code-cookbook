@@ -94,7 +94,7 @@ nav .navbar .nav>li>.dropdown-menu:after {
 
 /** SUB BRAND LOGOS **/
 
-.navbar .brand.haxe-logo { padding-right:0; margin: 3px 0 0 0px; }
+.navbar .brand.haxe-logo { position:relative; padding-right:0; margin: 3px 0 0 0px; right: 5px; }
 .navbar .brand.haxe-logo:hover { opacity:.9; }
 
 .navbar .brand.haxe-logo:after {
@@ -103,6 +103,7 @@ nav .navbar .nav>li>.dropdown-menu:after {
 	/* create arrow */
 	width: 0; 
 	height: 0; 
+	margin:0 5px 0 5px;
 	border-top: 22px solid transparent;
 	border-bottom: 22px solid transparent;
 	border-left: 7px solid #13110f; /* same color as nav bar */
@@ -119,7 +120,7 @@ nav .navbar .nav>li>.dropdown-menu:after {
 	padding:14px 20px 13px 20px;
 	margin:0 10px 0 0;
 	font:bold 18px "arial black", "open sans";
-	line-height:22px;
+	line-height:26px;
 	color:rgb(255,255,255);
 }
 .navbar .brand.sub:hover {
@@ -128,7 +129,6 @@ nav .navbar .nav>li>.dropdown-menu:after {
 }
 
 .navbar .brand.sub:before {
-	content:".."; /* two dots */
 	position:absolute;
 	margin-left:-33px;
 	margin-top:-28px;
@@ -136,6 +136,16 @@ nav .navbar .nav>li>.dropdown-menu:after {
 	font:bold 40px "Open Sans", sans-serif;
 	letter-spacing:0px;
 	color:#fff200;
+}
+
+.navbar .sub { 
+	text-shadow: 1px 1px 3px #000;	
+
+	margin-left: -10px;
+
+	font: 18px "Open Sans", sans-serif;
+	line-height:22px;
+	color:rgb(255,255,255);
 }
 
 /** SUB BRAND COLORS **/

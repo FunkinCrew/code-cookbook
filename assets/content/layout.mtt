@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="css/haxe-nav.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/fonts.min.css" />
 	
-	<link rel="icon" href="https://haxe.org/favicon.ico" />
+	<link rel="icon" href="ico/favicon.ico" />
 	<link rel="canonical" href="::currentPage.absoluteUrl::" ::cond currentPage.absoluteUrl != null:: />
 	<link href="::basePath::rss.xml" rel="alternate" type="application/atom+xml" title="RSS Feed Friday Night Funkin' Cookbook" />
 
@@ -56,8 +56,8 @@
 	<nav class="section nav dark">
 		<div class="navbar navbar-fixed-top navbar-inverse">
 			<div class="navbar-inner">
-				<button class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse" type="button"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="brand haxe-logo" href="https://haxe.org/"><img alt="Haxe" height="21" onerror="this.src='https://haxe.org/img/haxe-logo-horizontal-on-dark.png'" src="https://haxe.org/img/haxe-logo-horizontal-on-dark.svg" width="107" /></a>
-				<a class="brand sub ide" href="./">Friday Night Funkin'</a>
+				<button class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse" type="button"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="brand haxe-logo" href="https://funkin.me/"><img alt="Funkin' Cookbook" height="21" onerror="this.src='img/funkin-cookbook-logo.png'" src="svg/funkin-logo-export.svg" width="150" /></a>
+				<a class="brand sub ide" href="./">CODE</a>
 
 				<div class="nav-collapse collapse">
 				<ul class="nav">
@@ -75,6 +75,9 @@
 						</ul>
 					</li>
 					<li class="divider"></li>
+					<li>
+					<a class="sub" href="https://thekade.net/funkin-api/funkin/">Documentation</a>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -87,7 +90,7 @@
 	<div class="container">
 		<div class="copyright">
 			<p>
-			&copy;::DateTools.format(now, "%Y")::&nbsp;<a class="hf-link" href="https://funkin.me/" rel="external nofollow noopener" title="Funkin' Crew Website">The Funkin' Crew</a> |
+			&copy;::DateTools.format(now, "%Y")::&nbsp;<a class="hf-link" href="https://funkin.me/" rel="external nofollow noopener" title="Funkin' Crew Inc Website">The Funkin' Crew Inc.</a> |
 			&nbsp;Created with <a href="https://github.com/HaxeFoundation/code-cookbook" title="Haxe Code Cookbook on GitHub" rel="external nofollow noopener">Code Cookbook on GitHub</a> 
 			</p>
 			<p class="last-modified">Last deploy: ::DateTools.format(now, "%b %d, %Y")::</p>
