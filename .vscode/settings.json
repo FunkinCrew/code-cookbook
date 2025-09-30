@@ -1,4 +1,5 @@
-{"files.associations": {
-        "*.mtt": "html"
-    }
+{
+  "files.associations": {
+    "*.mtt": "html"
+  }
 }
