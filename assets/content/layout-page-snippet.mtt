@@ -21,6 +21,23 @@
 									<li ::cond page.visible && !page.isSerieHome():: ::attr class if(page==currentPage) "active"::><a href="::page.outputPath::">::page.title::</a></li>
 								::end::
 							</ol>
+							<ul class="unstyled" ::cond page==currentPage::>
+								::foreach heading page.anchorLinks::
+									<li><a href="::page.outputPath::#::heading.anchor::">::heading.title::</a>
+										<ul class="unstyled">
+										::foreach child heading.children::
+											<li><a href="::page.outputPath::#::child.anchor::">::child.title::</a>
+												<ul class="unstyled">
+												::foreach subchild child.children::
+													<li><a href="::page.outputPath::#::subchild.anchor::">::subchild.title::</a></li>
+												::end::
+												</ul>
+											</li>
+										::end::
+										</ul>
+									</li>
+								::end::
+							</ul>
 						</li>
 					::end::
 					</ul>
