@@ -573,9 +573,11 @@ class Generator {
 						{
 							var heading = new markdown.HtmlRenderer().render(el.children);
 							var id = heading.toLowerCase().replace(" ", "-");
+							var level = Std.parseInt(el.tag.substr(1));
 							var regex = new EReg("[^a-z0-9\\-]", "g");
 							id = regex.replace(id, "");
 							el.attributes.set("id", id);
+							page.addAnchor(heading, id, level);
 						}
 						if ((el.tag == "p") && !el.isEmpty())
 						{

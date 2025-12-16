@@ -13,6 +13,7 @@ class Page {
 	public var visible:Bool = true;
 	public var title:String;
 	public var description:String;
+	public var anchorLinks:Array<AnchorLink> = [];
 	public var templatePath:Path;
 	public var contentPath:Path;
 	public var outputPath:Path;
@@ -85,4 +86,38 @@ class Page {
 			else 
 				Math.round(minutes); // just round
 	}
+
+	public function addAnchor(title:String, anchor:String, level:Int):Void {
+		var anchorLink:AnchorLink = { title: title, anchor: anchor, level: level, children: [] };
+
+		if (anchorLinks.length == 0) {
+			anchorLinks.push(anchorLink);
+		} else {
+			var parent = findParentAnchor(level);
+			if (parent != null)
+				parent.children.push(anchorLink);
+			else
+				anchorLinks.push(anchorLink);
+		}
+	}
+
+	private function findParentAnchor(level:Int):AnchorLink {
+		if (anchorLinks.length == 0) return null;
+		var last = anchorLinks[anchorLinks.length - 1];
+		if (last.level < level) return last;
+		
+		var current = last;
+		while (current.children.length > 0) {
+			current = current.children[current.children.length - 1];
+			if (current.level < level) return current;
+		}
+		return null;
+	}
+}
+
+typedef AnchorLink = {
+	var title:String;
+	var anchor:String;
+	var level:Int;
+	var children:Array<AnchorLink>;
 }
