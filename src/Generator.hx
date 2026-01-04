@@ -61,6 +61,10 @@ class Generator {
 		sitemap.remove(expertCategory);
 		sitemap.push(expertCategory);
 
+		var communityCategory = sitemap.filter(function(c) return c.title.toLowerCase() == "community")[0];
+		sitemap.remove(communityCategory);
+		sitemap.push(communityCategory);
+
 		// add overview page for each category
 		addCategoryPages(sitemap);
 		
