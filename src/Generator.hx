@@ -38,7 +38,7 @@ class Generator {
 		
 		addCookbookPages(cookbookFolder);
 		trace(_pages.length + " articles");
-		
+
 		var homePage = addGeneralPages();
 		
 		// create list of categories (after all other pages are added)
@@ -77,6 +77,17 @@ class Generator {
 		for (category in sitemap) category.pages.sort(function(a, b) {
 			var a = a.outputPath.file;
 			var b = b.outputPath.file;
+
+			var forcedOrder = [{start: "+", shift: -1}, {start: "-", shift: 1}];
+			for (order in forcedOrder)
+			{
+				if (a.startsWith(order.start) && !b.startsWith(order.start))
+					return order.shift;
+
+				if (!a.startsWith(order.start) && b.startsWith(order.start))
+					return -order.shift;
+			}
+
 			return if (a < b) -1;
 				else if (a > b) 1;
 				else 0;
