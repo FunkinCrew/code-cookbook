@@ -4,7 +4,7 @@ title: "[FIX] "
 body:
   - type: markdown
     attributes:
-      value: "# PLEASE READ THE [ARTICLE STANDARTS](https://github.com/FunkinCrew/code-cookbook/blob/master/authoring.md) BEFORE OPENING PULL REQUESTS!"
+      value: "# PLEASE READ THE [ARTICLE STANDARDS](https://github.com/FunkinCrew/code-cookbook/blob/master/authoring.md) BEFORE OPENING PULL REQUESTS!"
 
   - type: textarea
     attributes:
