@@ -459,9 +459,9 @@ class Generator {
 				var contains = ["introduction", "intermediate", "advanced"].exists(function(item) return url.indexOf(item) != -1);
 				if (!url.startsWith("category/") && !contains) url = Path.directory(page.absoluteUrl) + "/" + url;
 				else url = "category/" + url;
-			}
 
-			if (url.endsWith(".md")) url = url.replace(".md", ".html");
+				if (url.endsWith(".md")) url = url.substr(0, url.length - 3) + ".html";
+			}
 
 			result += '[$text]($url$anchor)';
 			rest = rest.substr(end);
